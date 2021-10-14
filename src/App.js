@@ -111,10 +111,10 @@ function App() {
     const updatedProduct = buildNewCartItem(foundProduct);
 
     setCartItems((prevData) => {
-      return {
+      return [
         ...prevData.cartItems,
         updatedProduct
-      }
+      ]
     })
   }
 
@@ -206,10 +206,11 @@ function App() {
   const saveNewProduct = (newProduct) => {
 
     setProducts((prevData) => {
-      return {
+  
+      return [
         newProduct,
-        ...prevData.products
-      }
+        ...prevData
+      ]
     })
   }
 
